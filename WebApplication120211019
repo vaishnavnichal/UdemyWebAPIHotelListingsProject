@@ -1,0 +1,33 @@
+ [INF] App is starting!!!
+ [INF] Application started. Press Ctrl+C to shut down.
+ [INF] Hosting environment: Development
+ [INF] Content root path: C:\Users\nicha\source\repos\UdemyWebAPI\WebApplication1
+ [INF] Request starting HTTP/2.0 GET https://localhost:44360/weatherforecast  
+ [INF] Executing endpoint 'WebApplication1.Controllers.WeatherForecastController.Get (WebApplication1)'
+ [INF] Route matched with {action = "Get", controller = "WeatherForecast"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[WebApplication1.WeatherForecast] Get() on controller WebApplication1.Controllers.WeatherForecastController (WebApplication1).
+ [INF] Executing ObjectResult, writing value of type 'WebApplication1.WeatherForecast[]'.
+ [INF] Executed action WebApplication1.Controllers.WeatherForecastController.Get (WebApplication1) in 50.8075ms
+ [INF] Executed endpoint 'WebApplication1.Controllers.WeatherForecastController.Get (WebApplication1)'
+ [INF] Request finished in 217.2345ms 200 application/json; charset=utf-8
+ [INF] App is starting!!!
+ [INF] Application started. Press Ctrl+C to shut down.
+ [INF] Hosting environment: Development
+ [INF] Content root path: C:\Users\nicha\source\repos\UdemyWebAPI\WebApplication2
+ [INF] Request starting HTTP/2 GET https://localhost:44302/swagger - -
+ [INF] Request finished HTTP/2 GET https://localhost:44302/swagger - - - 301 - - 98.4219ms
+ [INF] Request starting HTTP/2 GET https://localhost:44302/swagger/index.html - -
+ [INF] Request finished HTTP/2 GET https://localhost:44302/swagger/index.html - - - 200 - text/html;charset=utf-8 126.3528ms
+ [INF] Request starting HTTP/2 GET https://localhost:44302/swagger/swagger-ui.css - -
+ [INF] Request starting HTTP/2 GET https://localhost:44302/swagger/swagger-ui-bundle.js - -
+ [INF] Request starting HTTP/2 GET https://localhost:44302/swagger/swagger-ui-standalone-preset.js - -
+ [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+ [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+ [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+ [INF] Request finished HTTP/2 GET https://localhost:44302/swagger/swagger-ui.css - - - 200 142933 text/css 77.7667ms
+ [INF] Request finished HTTP/2 GET https://localhost:44302/swagger/swagger-ui-standalone-preset.js - - - 200 311804 application/javascript 82.8861ms
+ [INF] Request finished HTTP/2 GET https://localhost:44302/swagger/swagger-ui-bundle.js - - - 200 986342 application/javascript 98.7970ms
+ [INF] Request starting HTTP/2 GET https://localhost:44302/swagger/v1/swagger.json - -
+ [INF] Request starting HTTP/2 GET https://localhost:44302/swagger/favicon-32x32.png - -
+ [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+ [INF] Request finished HTTP/2 GET https://localhost:44302/swagger/favicon-32x32.png - - - 200 628 image/png 1.5822ms
+ [INF] Request finished HTTP/2 GET https://localhost:44302/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 160.0660ms
