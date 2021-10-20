@@ -15,6 +15,7 @@ namespace WebApplication2
     {
         public static void Main(string[] args)
         {
+            //Serilog Logger Configuration
             Log.Logger=new LoggerConfiguration()
                 .WriteTo.File(path: "C:\\Users\\nicha\\source\\repos\\UdemyWebAPI\\WebApplication1"
                 , outputTemplate: "{TimeStamp:yyyy-MM-dd} [{Level:u3}] {Message:lj}{NewLine}{Exception}"

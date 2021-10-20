@@ -13,7 +13,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using WebApplication2.Configuration;
+using WebApplication2.IRepository;
 using WebApplication2.Models;
+using WebApplication2.Repository;
 
 namespace WebApplication2
 {
@@ -30,6 +32,7 @@ namespace WebApplication2
         public void ConfigureServices(IServiceCollection services)
         {
 
+            //configuring DBContext to deal with the database
             services.AddDbContext<DatabaseContext>(
                 options => options.UseSqlServer(Configuration.GetConnectionString("Default")));
             
@@ -40,9 +43,12 @@ namespace WebApplication2
 
             //initializing Automapper
             services.AddAutoMapper(typeof(MapperInitializer));
+            services.AddTransient<IUnitOfWork, UnitOfWork>();
 
-
-
+            services.AddControllers().AddNewtonsoftJson(
+                op => op.SerializerSettings.ReferenceLoopHandling 
+                = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+                );
             services.AddControllers();
         }
 
@@ -64,6 +70,10 @@ namespace WebApplication2
 
             app.UseEndpoints(endpoints =>
             {
+                //conventon based routing if needed 
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapControllers();
             });
         }
